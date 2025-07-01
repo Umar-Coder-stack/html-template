@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralFlow AI - Create with AI, Inside Your App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .floating {
+            animation: float 8s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite alternate;
+        }
+        @keyframes pulse-glow {
+            from { box-shadow: 0 0 30px rgba(102, 126, 234, 0.3); }
+            to { box-shadow: 0 0 60px rgba(102, 126, 234, 0.6); }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">NF</span>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">NeuralFlow</span>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="#features" class="hover:text-blue-400 transition-colors duration-300 font-medium">Features</a>
+                    <a href="#demo" class="hover:text-blue-400 transition-colors duration-300 font-medium">Demo</a>
+                    <a href="#pricing" class="hover:text-blue-400 transition-colors duration-300 font-medium">Pricing</a>
+                    <a href="#about" class="hover:text-blue-400 transition-colors duration-300 font-medium">About</a>
+                </div>
+                <button class="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 font-semibold pulse-glow">
+                    Start Free Trial
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative z-10 text-center max-w-6xl mx-auto px-4">
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-tight" data-aos="fade-up">
+                <span class="gradient-text">Create with AI</span>
+                <br>
+                <span class="text-white">Inside Your App</span>
+            </h1>
+            <p class="text-2xl md:text-3xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                The world's first AI-powered development platform that integrates seamlessly into your existing workflow. 
+                Build, deploy, and scale with intelligent automation at your fingertips.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16" data-aos="fade-up" data-aos-delay="400">
+                <button class="bg-white text-gray-900 px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 pulse-glow">
+                    🚀 Start Building Now
+                </button>
+                <button class="border-2 border-white text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+                    ▶️ Watch Live Demo
+                </button>
+            </div>
+            
+            <!-- Animated Mockup -->
+            <div class="relative max-w-4xl mx-auto" data-aos="zoom-in" data-aos-delay="600">
+                <div class="bg-gray-800/50 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <div class="text-gray-400 text-sm">neuralflow.ai/workspace</div>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold">AI</span>
+                            </div>
+                            <div class="text-lg font-semibold">AI Assistant</div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-blue-500/20 p-3 rounded-lg">
+                                <div class="text-blue-300 text-sm">Generate a React component for user authentication</div>
+                            </div>
+                            <div class="bg-gray-700 p-3 rounded-lg">
+                                <div class="text-green-400 text-sm">✓ Component created with TypeScript and Tailwind CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-24 h-24 bg-blue-500/20 rounded-full floating"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/20 rounded-full floating" style="animation-delay: -2s;"></div>
+        <div class="absolute top-1/2 left-20 w-20 h-20 bg-pink-500/20 rounded-full floating" style="animation-delay: -4s;"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">AI-Powered Features</h2>
+                <p class="text-2xl text-gray-300 max-w-3xl mx-auto">
+                    Everything you need to build, deploy, and scale with artificial intelligence
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Feature Card 1 -->
+                 <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold ml-3">Intelligent Automation</h3>
+                    </div>
+                    <p class="text-gray-600">Automate repetitive tasks, streamline workflows, and boost productivity with AI-powered tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">Real-Time Demo</h2>
+                <p class="text-2xl text-gray-300 max-w-3xl mx-auto">
+                    Watch our AI-powered platform in action, seamlessly integrated into your existing workflow
+                </p>
+            </div>
+            
+            <!-- Video Embed -->
+            <div class="relative w-full h-auto" data-aos="zoom-in" data-aos-delay="200">
+                <div class="aspect-video rounded-2xl overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-5xl font-bold mb-6 gradient-text">Pricing</h2>
+                <p class="text-2xl text-gray-300 max-w-3xl mx-auto">
+                    Choose the plan that fits your needs
+                </p>
+            </div>
+            
+            <!-- Pricing Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Free</h3>
+                        <p class="text-gray-600">For personal use</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</html>
